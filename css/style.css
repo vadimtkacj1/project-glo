@@ -571,6 +571,7 @@ progress::-moz-progress-value {
     padding: 9rem 9.5rem;
     background: #2C2C2C;
     text-align: center;
+    position: relative;
 }
 
 .modal__header {
@@ -629,6 +630,15 @@ progress::-moz-progress-value {
 .noscroll {
     overflow: hidden !important;
     height: 100% !important;
+}
+
+.dagger {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
 }
 
 /*сетка*/
