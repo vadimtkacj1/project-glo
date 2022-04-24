@@ -3,13 +3,6 @@ const modal = document.querySelector('.modal');
 const modalInner = document.querySelector('.modal__inner');
 const courseButton = document.querySelector('.course__button');
 
-modalBtn.addEventListener('click', () => (modal.style.display = 'flex'));
-
-modal.addEventListener('click', event => {
-  const modalContent = event.target.closest('.modal__inner');
-  if (!modalContent) modal.style.display = '';
-});
-
 const createButton = url => {
   const elemDiv = document.createElement('div');
   const elemImg = document.createElement('img');
@@ -22,8 +15,13 @@ const createButton = url => {
 
 modalInner.append(createButton('img/dagger.png'));
 
-const button = modalInner.querySelector('.dagger');
+modalBtn.addEventListener('click', () => (modal.style.display = 'flex'));
 
-button.addEventListener('click', () => (modal.style.display = ''));
+modal.addEventListener('click', event => {
+  const modalContent = event.target.closest('.modal__inner');
+  const button = modalInner.querySelector('.dagger')
+  
+  if (!modalContent || event.target === button) modal.style.display = '';
+});
 
 courseButton.addEventListener('click', () => (modal.style.display = 'flex'));
