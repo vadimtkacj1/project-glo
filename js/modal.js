@@ -6,8 +6,8 @@ const courseButton = document.querySelector('.course__button');
 const createButton = url => {
   const elemDiv = document.createElement('div');
   const elemImg = document.createElement('img');
+  elemDiv.classList.add('button-dagger');
   elemImg.src = url;
-  elemImg.classList.add('dagger');
   elemDiv.append(elemImg);
 
   return elemDiv;
@@ -19,9 +19,9 @@ modalBtn.addEventListener('click', () => (modal.style.display = 'flex'));
 
 modal.addEventListener('click', event => {
   const modalContent = event.target.closest('.modal__inner');
-  const button = modalInner.querySelector('.dagger')
-  
-  if (!modalContent || event.target === button) modal.style.display = '';
+  const eventButton = event.target.closest('.button-dagger');
+
+  if (!modalContent || eventButton) modal.style.display = '';
 });
 
 courseButton.addEventListener('click', () => (modal.style.display = 'flex'));

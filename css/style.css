@@ -632,7 +632,7 @@ progress::-moz-progress-value {
     height: 100% !important;
 }
 
-.dagger {
+.button-dagger {
     width: 20px;
     height: 20px;
     position: absolute;
