@@ -641,6 +641,10 @@ progress::-moz-progress-value {
     cursor: pointer;
 }
 
+.colorTimer {
+    color: red;
+}
+
 /*сетка*/
 @media (max-width: 108em) {
     html {
